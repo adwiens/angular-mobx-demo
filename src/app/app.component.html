@@ -1,0 +1,9 @@
+<app-list *ngIf="onPush.value" [enableMobX]="enableMobX.value"></app-list>
+<app-list-default *ngIf="!onPush.value" [enableMobX]="enableMobX.value"></app-list-default>
+<app-input></app-input>
+<br>
+<br>
+<label><input type="checkbox" [formControl]="onPush"> OnPush</label>
+<br>
+<label><input type="checkbox" [formControl]="enableMobX"> Apply MobX Autorun Directive</label>
+<p>Explanation: The list should no longer filter when OnPush is true and Apply MobX Autorun Directive is false because changes in the state service are not pushed to the component by MobX in this case</p>

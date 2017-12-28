@@ -1,0 +1,8 @@
+<p>Change detection: OnPush</p>
+<p>MobX enabled: {{ enableMobX | json }}</p>
+<div *ngIf="enableMobX">
+  <pre *mobxAutorun>{{ state.filteredItems | json }}</pre>
+</div>
+<div *ngIf="!enableMobX">
+  <pre>{{ state.filteredItems | json }}</pre>
+</div>
